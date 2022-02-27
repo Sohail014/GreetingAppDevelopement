@@ -14,13 +14,5 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
 
-    @PostMapping("/postGreeting")
-    public Greeting sayHello(@RequestBody Greeting greeting) {
-        return new Greeting(counter.incrementAndGet(), String.format(template, greeting.getContent()));
-    }
 
-    @PutMapping("/putMapping/{counter}")
-    public Greeting sayHello(@PathVariable long counter, @RequestParam(value = "content") String content) {
-        return new Greeting(counter, String.format(template, content));
-    }
 }
