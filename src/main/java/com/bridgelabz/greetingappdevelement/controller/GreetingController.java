@@ -28,5 +28,10 @@ public class GreetingController {
         return new ResponseEntity<String>(service.getMessage(), HttpStatus.OK);
     }
 
+    @GetMapping("/getGreetingMessage")
+    public ResponseEntity<String> getGreetingMessage(@RequestParam(value = "firstName", defaultValue = "World") String firstName, @RequestParam(value = "lastName", defaultValue = "") String lastName) {
+        return new ResponseEntity<String>(service.getGreetingMessage(firstName, lastName), HttpStatus.OK);
+    }
+
 
 }
