@@ -6,6 +6,6 @@ import org.springframework.stereotype.Service;
 public class GreetingService {
 
     public String getMessage(){
-        return "this is a message from spring boot application";
+        return "Hello World";
     }
 }

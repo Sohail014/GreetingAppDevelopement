@@ -21,6 +21,8 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
 
+
+
     @GetMapping("/getMessage")
     public ResponseEntity<String> Message(){
         return new ResponseEntity<String>(service.getMessage(), HttpStatus.OK);
